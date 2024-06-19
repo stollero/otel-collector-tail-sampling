@@ -13,3 +13,9 @@
         -v /tmp/otel-collector-config.yaml:/etc/otel-collector-config.yaml \
         otel/opentelemetry-collector:latest \
         --config=/etc/otel-collector-config.yaml
+
+# Use refinery with collector in infra directory
+
+    cd infra
+    export HONEYCOMB_API_KEY=team_key_from_honeycomb
+    docker-compose up -d
